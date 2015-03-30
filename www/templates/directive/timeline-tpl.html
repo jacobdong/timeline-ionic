@@ -1,0 +1,39 @@
+
+
+<div ng-repeat="node in tracks">
+  <style>
+      .row{
+        padding:0;
+        margin:0;
+      }
+      .timeline-message{
+        border-color: #145fd7;
+        background-color: #4a87ee;
+        //background-image: linear-gradient(0deg, #145fd7, #145fd7 50%, transparent 50%);
+        color: #fff;
+      }
+  </style>
+  <div class="row" >
+      <div class="col col-10" style="border-right:4px solid #4a87ee;"></div>
+      <div class="col col-10 col-center" style="height:20px;font-size:20px;width:20px;">
+        <i class="ion ion-help-circled" style="margin-left:-5px;"> </i>
+      </div>
+      <div class="col col-80 col-center">
+         　<p class="timeline-message" style="padding:10px;border-radius:4px 4px;min-height:72px;">
+              {{$index}} . {{node.message}}
+           </p>
+           <p class="text-right">
+             <em>2012-12-12</em>
+           </p>
+           <p class="text-right">
+             <em>{{node.owner}}</em>
+           </p>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-20" style="text-align:center" >
+        <i class="ion ion-ios-location assertive" style="margin-left:-3px;margin-top:8px;"> </i>
+    </div>
+  </div>
+</div>
